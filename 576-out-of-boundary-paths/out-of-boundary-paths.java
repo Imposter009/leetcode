@@ -28,3 +28,19 @@ class Solution {
         return dp[i][j][moves] = count % mod;
     }
 }
+
+---
+    // my
+    class Solution {
+    int ans=0;
+    public int findPaths(int m, int n, int maxMove, int startRow, int startColumn) {
+        if(maxMove==0) return 0;
+        if(startRow==m || startColumn== n || startRow==-1 || startColumn==-1) return 1;
+        ans+= findPaths(m,n,maxMove-1,startRow+1,startColumn );
+        ans+= findPaths(m,n,maxMove-1,startRow,startColumn+1);
+        ans +=findPaths(m,n,maxMove-1,startRow-1,startColumn );
+        ans+= findPaths(m,n,maxMove-1,startRow,startColumn-1 );
+        return ans;
+        }
+
+}
