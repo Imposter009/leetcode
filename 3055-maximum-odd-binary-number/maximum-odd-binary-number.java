@@ -23,4 +23,6 @@ class Solution {
 Notes:
 odd number ke bindary value me last me 1 hoga for sure.
 even number ke bindary value me last me 0 hoga for sure.
+max odd number with n number of 1 wo hoga jisme last me ek 1 hoga aur baaki saare 1 starting me honge aur beech ki space me  honge.
+max even with n number of   wo hoga jisme saare  starting me ho aur uske baad saare .
 */
