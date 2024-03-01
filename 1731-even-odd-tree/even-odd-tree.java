@@ -52,3 +52,46 @@ class Solution {
         return true;
     }
 }
+
+--------------------------------------------------------------------------------------------------------------
+    // my code:
+    class Solution {
+    public boolean isEvenOddTree(TreeNode root) {
+        if(root.val%2==0) return false;
+        Queue<TreeNode> q=new LinkedList<>();
+        q.add(root);
+        int lvl=0;
+        while(!q.isEmpty())
+        {
+            int l=q.size();
+            List<Integer> ll=new ArrayList<>();
+            for(int i=0;i<l;i++)
+            {
+                TreeNode t=q.poll();
+                if(t.left!=null){
+                    q.add(t.left);
+                    ll.add(t.left.val);
+                }
+                if(t.right!=null){
+                    q.add(t.right);
+                    ll.add(t.right.val);
+                }
+            }
+            lvl=lvl+1;
+           for(int j=0;j<ll.size();j++)
+            {
+                //even
+                if(lvl%2==0){
+                    if(ll.get(j)%2==0) return false;
+                    if(j+1<ll.size()) if(ll.get(j)>=ll.get(j+1)) return false;
+                }
+                //odd
+                if(lvl%2!=0){
+                    if(ll.get(j)%2!=0 && ll.get(j+1)%2!=0) return false;
+                     if(j+1<ll.size()) if(ll.get(j)<=ll.get(j+1)) return false;
+                }
+            }
+        }
+        return true;
+    }
+}
