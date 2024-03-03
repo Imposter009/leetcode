@@ -28,3 +28,8 @@ class Solution {
     return head;
     }
 }
+/*
+maine galti ki thi while loop me. current.next!=null kr diya tha jiski wajha se length ki value 1 kam a rahi thi.
+*/
+---------------------------------------------------------------------------------------------------------------------------------------
+ 
