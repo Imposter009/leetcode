@@ -5,22 +5,23 @@ class Solution {
         int maxscore=0;
         int i=0;
         int n=tokens.length;
-         while (i <= n-1) {
-            if (power >= tokens[i]) {
-                score++;
-                maxscore = Math.max(maxscore, score); 
-                power -= tokens[i]; 
-                i++;
-
-            } else if (score >= 1) {
-                score--;
-                power += tokens[n-1]; 
-                n--;
-
-            } else {
-                return maxscore;
-            }
+         while(i<=n-1) {
+        if(power>=tokens[i])
+        {
+         score++;
+         maxscore=Math.max(maxscore,score);
+         power-=tokens[i];
+         i++;
         }
-        return maxscore;
+        else if(score>=1)
+        {
+            score--;
+            power+=tokens[n-1];
+            n--;
+        }
+        else return maxscore;
+        }
+    
+    return maxscore;
     }
 }
