@@ -18,3 +18,4 @@ class Solution {
      return j-i+1;   
     }
 }
+//inner loop me we are using equal too bec in case of string like"cabaabac" jab wo inner a pr ayega i.e index 3 to wo usko increment kar ke 4 kr dega to agla while loop chale isliye we use equal to.
