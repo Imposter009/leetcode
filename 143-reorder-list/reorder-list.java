@@ -30,6 +30,7 @@ class Solution {
             i--;
         }
         curr.next=null;
+        //last me self loop ban gaya hoga isliye hum curr.next=null kr rahe hai
         return head;
     }
 }
