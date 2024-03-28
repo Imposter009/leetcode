@@ -5,23 +5,17 @@ class Solution {
         
         int n = nums.length;
         int count = 0;
-        
-        int left = 0;
-        int right = 0;
-        int prod = 1;
-        
-        while (right < n) {
-            prod *= nums[right];
-            
-            while (prod >= k) {
-                prod /= nums[left];
-                left++;
+        int p=1;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i;j<n;j++)
+            {
+                p*=nums[j];
+                if(p<k)count++;
+                else break;
             }
-            
-            count += (right - left) + 1;
-            right++;
+            p=1;
         }
-        
         return count;
     }
 }
