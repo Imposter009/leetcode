@@ -44,7 +44,7 @@ class Solution {
             }
             }
         }
-        // System.out.println(l);
+        // converting list<list<>> into array
         int[][]arry=new int[l.size()][4];
         int i=0,j=0;
         for (List<Integer> row : l) {
